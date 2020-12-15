@@ -5,11 +5,8 @@ function testFunc() {
 }
 
 // function superbowlWin = record.find( r=> r.result == "W")
-
 function superbowlWin(record) {
-  let winner = record.find(r => r.result === "W")
-  return winner
+  const winner = record.find(({ result }) => result === "W");
+  return (winner ? winner.year : undefined)
 
 }
-
-superbowlWin()
